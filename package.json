@@ -14,8 +14,7 @@
     "firebase": "^10.14.1",
     "nuxt": "^3.13.0",
     "vue": "latest",
-    "vue-router": "latest",
-    "vuefire": "^3.2.0"
+    "vue-router": "latest"
   },
   "devDependencies": {
     "typescript": "^5.6.3"
