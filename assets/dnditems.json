@@ -1,0 +1,261 @@
+[{
+  "name": "Abracadabrus",
+  "type": "trinket",
+  "rarity": "very rare",
+  "price": 8000,
+  "image": "",
+  "source": "Icewind Dale: Rime of the Frostmaiden",
+  "desc": "An abracadabrus is an ornate, gemstone-studded wooden chest that weighs 25 pounds while empty. Its interior compartment is a cube measuring 1½ feet on a side. The chest has 20 charges. A creature can use an action to touch the closed lid of the chest and expend 1 of the chest’s charges while naming one or more nonmagical objects (including raw materials, foodstuffs, and liquids) worth a total of 1 gp or less. The named objects magically appear in the chest, provided they can all fit inside it and the chest doesn’t contain anything else. For example, the chest can conjure a plate of strawberries, a bowl of hot soup, a flagon of water, a stuffed animal, or a bag of twenty caltrops. Food and drink conjured by the chest are delicious, and they spoil if not consumed after 24 hours. Gems and precious metals created by the chest disappear after 1 minute. The chest regains 1d20 expended charges daily at dawn. If the item’s last charge is expended, roll a d20. On a 1, the chest loses its magic (becoming an ordinary chest), and its gemstones turn to dust."
+},{
+  "name": "Absorbing Tattoo",
+  "type": "tattoo",
+  "rarity": "very rare",
+  "price": 10000,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything pg. 119 ",
+  "desc": "Damage Resistance. While the tattoo is on your skin, you have resistance to a type of damage associated with that color, as shown on the table below. The DM chooses the color or determines it randomly. Damage Absorption. When you take damage of the chosen type, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can’t be used again until the next dawn. "
+},{
+  "name": "Adamantine",
+  "type": "prefix",
+  "bases": ["Chain Shirt", "Scale Mail", "Breastplate", "Half Plate", "Ring Mail", "Chain Mail", "Splint Armor", "Plate Armor"],
+  "rarity": "uncommon",
+  "price": 700,
+  "image": "",
+  "source": "Basic Rules (2014)",
+  "desc": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit."
+},{
+  "name": "Aastrika’s Crown",
+  "type": "headgear",
+  "rarity": "rare",
+  "price": 7000,
+  "image": "",
+  "source": "Where Evil Lives, pg. 116",
+  "desc": "Blend with the Blaze. As an action, you can touch a Small or larger mundane flame. When you do, you take no damage from the fire, and you know the location of every Small or larger flame within 10 miles of you. As part of the action, you can scrye on one of these flames. This property can be used once, and the crown regains all expended uses daily at dawn. Fire Resistance. You have resistance to fire damage while wearing this crown. Magma Transport: While you are within 10 feet of a lava pool, you can use an action to teleport yourself and up to one willing creature within 10 feet of you to an unoccupied space within 10 feet of any other lava pool within 120f"
+},{
+  "name": "Adze of Annam",
+  "type": "greataxe",
+  "rarity": "artifact",
+  "price": 290000,
+  "image": "",
+  "source": "Bigby Presents: Glory of the Giants, pg. 110",
+  "desc": "Random Properties: The adze has the following random properties, determined by rolling on the appropriate table in the Dungeon Master’s Guide: 2 minor beneficial properties 1 major beneficial property 2 minor detrimental properties Magic Weapon. When a creature attunes to the adze, the artifact magically adjusts its size so that creature can wield it as a greataxe. The adze is a magic weapon that grants a +3 bonus to attack and damage rolls made with it. On a hit, the adze deals an additional 3d12 force damage. It also deals double damage to objects and structures. Divine Mattock. As an action, you can call upon the might of the All-Father and use the adze to cast move earth or fabricate. Once this property is used, it can’t be used again until the next dawn. Proficiency with a Greataxe allows you to add your proficiency bonus to the attack roll for any attack you make with it. This weapon has the following mastery property. To use this property, you must have a feature that lets you use it. Cleave. If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don’t add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn."
+},{
+  "name": "Akmon, Hammer of Purphoros",
+  "type": "warhammer",
+  "rarity": "Artifact",
+  "price": 500000,
+  "image": "",
+  "source": "Mythic Odysseys of Theros, pg. 198 Akmon, Hammer of Purphoros",
+  "desc": "Purphoros’s hammer works wonders and disasters, the god of the forge using it to craft ground-breaking marvels and dangerous inventions in equal measure. Purphoros rarely bestows Akmon on mortals but occasionally leaves it unattended at his forge in Mount Velus. When Purphoros does permit a mortal to use the hammer, it’s usually so they might bring an important work into being, wreck a force of destruction, or forge something remarkable somewhere the god isn’t welcome. Hammer of the Forge. This magic warhammer grants a +3 bonus to attack and damage rolls made with it. When you hit with an attack using it, the target takes an extra 3d10 fire damage. Blessing of the Forge. If you are a worshiper of Purphoros, you gain all the following benefits for which you have the required piety: Piety 10+. The hammer has 1 randomly determined minor beneficial property. Piety 25+. The hammer has 1 randomly determined major beneficial property. Piety 50+. The hammer has 1 additional randomly determined major beneficial property. If you aren’t a worshiper of Purphoros, the hammer has 2 randomly determined minor detrimental properties. See “Artifacts” in chapter 7 of the Dungeon Master’s Guide for details on randomly determined properties. Reforged. While holding the hammer, you have resistance to fire damage and are immune to exhaustion. Additionally, you have proficiency with smith’s tools and have advantage on all ability checks made using them. Spells. While the hammer is on your person, you can use an action to cast one of the following spells (save DC 18): animate objects, heat metal, fabricate, magic weapon, mending, shatter. Once you use the hammer to cast a spell, the spell can’t be cast again from it until the next dusk. Destroying the Hammer. To destroy the hammer, it must be taken to the realm of Tizerus, in the Underworld. There it must be coated in clay from the Mire of Punishment. The heat of the hammer hardens the clay, which fuses to it after one month. Once fully hardened, the clay-covered hammer must be swallowed and digested by a kraken. Proficiency with a Warhammer allows you to add your proficiency bonus to the attack roll for any attack you make with it. This weapon has the following mastery property. To use this property, you must have a feature that lets you use it. Push. If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller."
+},{
+  "name": "Alchemical Compendium",
+  "type": "Book",
+  "rarity": "rare",
+  "price": 5000,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "Acrid odors cling to this stained, heavy volume. The book’s metal fittings are copper, iron, lead, silver, and gold, some frozen mid-transition from one metal to another. When found, the book contains the following spells: enlarge/reduce, feather fall, flesh to stone, gaseous form, magic weapon, and polymorph. It functions as a spellbook for you. While you are holding the book, you can use it as a spellcasting focus for your wizard spells. The book has 3 charges, and it regains 1d3 expended charges daily at dawn. You can use the charges in the following ways while holding it: If you spend 1 minute studying the book, you can expend 1 charge to replace one of your prepared wizard spells with a different spell in the book. The new spell must be of the transmutation school. As an action, you can touch a nonmagical object that isn’t being worn or carried and spend a number of charges to transform the target into another object. For 1 charge, the object can be no larger than 1 foot on a side. You can spend additional charges to increase the maximum dimensions by 2 feet per charge. The new object must have a gold value equal to or less than the original"
+},{
+  "name": "Alchemy Jug",
+  "type": "trinket",
+  "rarity": "uncommon",
+  "price": 450,
+  "image": "",
+  "source": "Dungeon Master’s Guide (2014), pg. 150",
+  "desc": "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. Sloshing sounds can be heard from within the jug when it is shaken, even if the jug is empty. You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends on the liquid you named. Once the jug starts producing a liquid, it can't produce a different one, or more of one that"
+},{
+  "name": "Alchemy Jug (Blue)",
+  "type": "trinket",
+  "rarity": "uncommon",
+  "price": 450,
+  "image": "",
+  "source": "Candlekeep Mysteries, pg. 144 Alchemy Jug (Blue)",
+  "desc": "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. Sloshing sounds can"
+},{
+  "name": "Alchemy Jug (Orange)",
+  "type": "trinket",
+  "rarity": "uncommon",
+  "price": 450,
+  "image": "",
+  "source": "Candlekeep Mysteries, pg. 144 Alchemy Jug (Blue)",
+  "desc": "This ceramic jug appears to be able to hold a gallon of liquid and weighs 12 pounds whether full or empty. Sloshing sounds can be heard from within the jug when it is shaken, even if the jug is empty. You can use an action and name one liquid from the table below to cause the jug to produce the chosen liquid. Afterward, you can uncork the jug as an action and pour that liquid out, up to 2 gallons per minute. The maximum amount of liquid the jug can produce depends "
+},{
+  "name": "All-Purpose Tool +1",
+  "type": "trinket",
+  "rarity": "uncommon",
+  "price": 650,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119  All-Purpose Tool",
+  "desc": "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the Equipment chapter in the Player's Handbook for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool’s rarity. As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+},{
+  "name": "All-Purpose Tool +2",
+  "type": "trinket",
+  "rarity": "rare",
+  "price": 4500,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119 All-Purpose Tool",
+  "desc": "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the Equipment chapter in the Player's Handbook for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool’s rarity. As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+},{
+  "name": "All-Purpose Tool +3",
+  "type": "trinket",
+  "rarity": "very rare",
+  "price": 35000,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119 All-Purpose Tool",
+  "desc": "This simple screwdriver can transform into a variety of tools; as an action, you can touch the item and transform it into any type of artisan's tool of your choice (see the quipment chapter in the Player's Handbook for a list of artisan's tools). Whatever form the tool takes, you are proficient with it. While holding this tool, you gain a bonus to the spell attack rolls and the saving throw DCs of your artificer spells. The bonus is determined by the tool’s rarity. As an action, you can focus on the tool to channel your creative forces. Choose a cantrip that you don't know from any class list. For 8 hours, you can cast that cantrip, and it counts as an artificer cantrip for you. Once this property is used, it can't be used again until the next dawn."
+},{
+  "name": "Amethyst Lodestone",
+  "type": "trinket",
+  "rarity": "very rare",
+  "price": 45000,
+  "image": "",
+  "source": "Fizban's Treasury of Dragons, pg. 22",
+  "desc": "This fist-sized chunk of amethyst is infused with an amethyst dragon’s ability to bend gravitational forces. While you are carrying the lodestone, you have advantage on Strength saving throws. The lodestone has 6 charges for the following properties, which you can use while you are holding the stone. The stone regains 1d6 expended charges daily at dawn. Flight. As a bonus action, you can expend 1 charge to gain the power of flight for 10 minutes. For the duration, you gain a flying speed equal to your walking speed, and you can hover. Gravitational Thrust. As an action, you can expend 1 charge to focus gravity around a creature you can see within 60 feet of you. The target must succeed on a DC 18 Strength saving throw or be pushed up to 20 feet in a direction of your choice. Reverse Gravity. As an action, you can expend 3 charges to cast reverse gravity from the stone (save DC 18)."
+},{
+  "name": "Ammunition +1",
+  "type": "suffix",
+  "bases": ["arrows", "blowgun needles", "crossbow bolts", "sling bullets"],
+  "rarity": "uncommon",
+  "price": 250,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "You have a +1 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
+},{
+  "name": "Ammunition +2",
+  "type": "suffix",
+  "bases": ["arrows", "blowgun needles", "crossbow bolts", "sling bullets"],
+  "rarity": "rare",
+  "price": 2500,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "You have a +2 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
+},{
+  "name": "Ammunition +3",
+  "type": "suffix",
+  "bases": ["arrows", "blowgun needles", "crossbow bolts", "sling bullets"],
+  "rarity": "very rare",
+  "price": 5000,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "You have a +3 bonus to attack and damage rolls made with this piece of magic ammunition. Once it hits a target, the ammunition is no longer magical."
+},{
+  "name": "Azure edge",
+  "type": "sword",
+  "rarity": "legendary",
+  "price": 100000,
+  "image": "",
+  "source": "",
+  "desc": ""
+},{
+  "name": "Amulet of Health",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 4500,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher without it"
+},{
+  "name": "Amulet of Proof against Detection and Location",
+  "type": "Necklace",
+  "rarity": "uncommon",
+  "price": 750,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors."
+},{
+  "name": "Amulet of Protection from Turning",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 3000,
+  "image": "",
+  "source": "Tales from the Yawning Portal, pg. 228",
+  "desc": "While you wear this amulet of silver and turquoise, you have advantage on saving throws against effects that turn undead.\nIf you fail a saving throw against such an effect, you can choose to succeed instead. You can do so three times, and expended uses recharge daily at dawn.\nEach time an effect that turns undead is used against you, the amulet glows with silvery blue light for a few seconds."
+},{
+  "name": "Amulet of the Black Skull",
+  "type": "Necklace",
+  "rarity": "very rare",
+  "price": 30000,
+  "image": "",
+  "source": "Tomb of Annihilation, pg. 206",
+  "desc": "This amulet is carved from obsidian and shaped like a screaming humanoid skull, with ruby eyes and emeralds for teeth. It hangs from an iron chain necklace.\nThe amulet has 6 charges and regains 1d6 charges daily at dawn. While wearing the amulet, you can use an action to expend 1 of its charges to transport yourself and anything you are wearing or carrying to a location within 100 feet of you. The destination you choose doesn’t need to be in your line of sight, but it must be familiar to you (in other words, a place you have seen or visited), and it must be on the same plane of existence as you. This effect isn’t subject to the magic restrictions placed on the Tomb of the Nine Gods; thus, the amulet can be used to enter and exit the tomb.If you aren’t undead, you must make a DC 16 Constitution saving throw each time you use the amulet to teleport. On a failed saving throw, the black skull cackles as you are transformed in transit. The transformation takes effect as soon as you arrive at the destination, and is determined randomly by rolling percentile dice and consulting the Black Skull Transformation table.Black Skull Transformationd100 Transformation01–20 The symbol of Acererak is burned into your flesh, a curse that can only be removed with a remove curse spell or similar magic. Until the curse ends, your hit points can’t be restored by magic.21–35 You grow larger as if affected by an enlarge/reduce spell, except the effect lasts for 1 hour.6–50 You grow smaller as if affected by an enlarge/reduce spell, except the effect lasts for 1 hour.51–70 You arrive at the destination wearing nothing but the amulet of the black skull. Everything else that you were wearing or carrying appears in a random unoccupied space within 100 feet of you.71–95 You are paralyzed for 1 minute or until this effect is ended with a lesser restoration spell or similar magic.96–00 You become petrified. This effect can be ended only with a greater restoration spell or similar magic."
+},{
+  "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "uncommon",
+  "price": 500,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet’s rarity. Uncommon +1\nWhile you wear this amulet, you can use your Channel Divinity feature without expending one of the feature’s uses. Once this property is used, it can’t be used again until the next dawn."
+},{
+ "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 4500,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet’s rarity. Rare +2\nWhile you wear this amulet, you can use your Channel Divinity feature without expending one of the feature’s uses. Once this property is used, it can’t be used again until the next dawn."
+},{
+ "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "very rare",
+  "price": 40000,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119"
+},{
+  "name": "Amulet of Health",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 4500,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher without it"
+},{
+  "name": "Amulet of Proof against Detection and Location",
+  "type": "Necklace",
+  "rarity": "uncommon",
+  "price": 750,
+  "image": "",
+  "source": "Basic Rules (2014), pg. 150",
+  "desc": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors."
+},{
+  "name": "Amulet of Protection from Turning",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 3000,
+  "image": "",
+  "source": "Tales from the Yawning Portal, pg. 228",
+  "desc": "While you wear this amulet of silver and turquoise, you have advantage on saving throws against effects that turn undead.\nIf you fail a saving throw against such an effect, you can choose to succeed instead. You can do so three times, and expended uses recharge daily at dawn.\nEach time an effect that turns undead is used against you, the amulet glows with silvery blue light for a few seconds."
+},{
+  "name": "Amulet of the Black Skull",
+  "type": "Necklace",
+  "rarity": "very rare",
+  "price": 30000,
+  "image": "",
+  "source": "Tomb of Annihilation, pg. 206",
+  "desc": "This amuletion siasdasdasdqweqweqwelar magic."
+},{
+  "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "uncommon",
+  "price": 500,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet’s rarity. Uncommon +1 \n While you wear this amulet, you can use your Channel Divinity feature without expending one of the feature’s uses. Once this property is used, it can’t be used again until the next dawn."
+},{
+ "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "rare",
+  "price": 4500,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet’s rarity. Rare +2\nWhile you wear this amulet, you can use your Channel Divinity feature without expending one of the feature’s uses. Once this property is used, it can’t be used again until the next dawn."
+},{
+ "name": "Amulet of the Devout",
+  "type": "Necklace",
+  "rarity": "very rare",
+  "price": 40000,
+  "image": "",
+  "source": "Tasha’s Cauldron of Everything, pg. 119",
+  "desc": "This amulet bears the symbol of a deity inlaid with precious stones or metals. While you wear the holy symbol, you gain a bonus to spell attack rolls and the saving throw DCs of your spells. The bonus is determined by the amulet’s rarity. very rare +3\nWhile you wear this amulet, you can use your Channel Divinity feature without expending one of the feature’s uses. Once this property is used, it can’t be used again until the next dawn."
+}
+]
