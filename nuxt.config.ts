@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-vuefire'
+    'nuxt-vuefire',
+    '@pinia/nuxt',
   ],
   vuefire: {
     auth: {
