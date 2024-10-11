@@ -2,6 +2,12 @@
 import testData from '~/assets/dnditems.json'
 import type { dndItem } from '~/types/dnditem';
 
+import { useItemStore } from '~/stores/firestore'
+
+const { data } = useItemStore()
+
+console.log(data)
+
 const dataSet = ref<dndItem[]>(testData)
 
 const showConfig = ref(true)
