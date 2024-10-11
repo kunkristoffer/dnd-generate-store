@@ -1,3 +1,5 @@
+import { browserLocalPersistence } from "firebase/auth";
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {
@@ -10,6 +12,7 @@ export default defineNuxtConfig({
   ],
   vuefire: {
     auth: {
+      browserLocalPersistence: true,
       enabled: true
     },
     config: {
