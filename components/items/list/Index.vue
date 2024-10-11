@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useItemStore } from '~/stores/firestore'
+  import { useItemStore } from '~/stores/itemStore'
   const store = useItemStore()
   const { data } = storeToRefs(store);
 </script>

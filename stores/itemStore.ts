@@ -1,7 +1,11 @@
 import testData from '~/assets/dnditems.json'
 import type { dndItem, dndItemBase, dndRarity } from '~/types/dnditem';
+import { doc, getDoc, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore'
 
 export const useItemStore = defineStore('itemStore', () => {
+  const db = useFirestore()
+  const user = useCurrentUser()
+
   const data = ref<dndItem[]>(JSON.parse(JSON.stringify(testData)))
 
   const updateData = (config: dndRarity) => {
