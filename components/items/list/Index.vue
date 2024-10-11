@@ -1,10 +1,7 @@
 <script setup lang="ts">
   import { useItemStore } from '~/stores/firestore'
-  const { data } = useItemStore()
-
-  const sorted = computed(() => {
-    return data.sort((a, b) => a.name.localeCompare(b.name))
-  })
+  const store = useItemStore()
+  const { data } = storeToRefs(store);
 </script>
 
 <template>
