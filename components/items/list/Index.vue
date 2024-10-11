@@ -1,10 +1,9 @@
 <script setup lang="ts">
-  import { defineProps } from "vue";
-  import type { dndItem } from "~/types/dnditem";
-  const props = defineProps<{ list: Array<dndItem> }>()
+  import { useItemStore } from '~/stores/firestore'
+  const { data } = useItemStore()
 
   const sorted = computed(() => {
-    return props.list.sort((a, b) => a.name.localeCompare(b.name))
+    return data.sort((a, b) => a.name.localeCompare(b.name))
   })
 </script>
 
@@ -16,7 +15,7 @@
       <div class="table-cell px-4 py-1">rarity</div>
       <div class="table-cell px-4 py-1">price</div>
     </header>
-    <div v-for="(item, index) in sorted" :key="item.name+index" class="table-row test mt-2 text-slate-300 hover:text-white hover:!bg-slate-800">
+    <div v-for="(item, index) in data" :key="item.name+index" class="table-row test mt-2 text-slate-300 hover:text-white hover:!bg-slate-800">
       <div class="table-cell px-4 py-1">{{ item.name }}</div>
       <div class="table-cell px-4 py-1">{{ item.type }}</div>
       <div class="table-cell px-4 py-1">{{ item.rarity }}</div>
