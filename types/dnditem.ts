@@ -17,3 +17,13 @@ export interface dndItemBase {
   image?: string,
   src?: string,
 }
+
+export interface dndRarity {
+  mundane?: number,
+  common?: number,
+  uncommon?: number,
+  rare?: number,
+  veryrare?: number,
+  legendary?: number,
+  artifact?: number
+}
