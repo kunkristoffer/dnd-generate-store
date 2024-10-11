@@ -13,10 +13,13 @@ export default defineNuxtConfig({
       enabled: true
     },
     config: {
-      apiKey: process.env.FIREBASE_API_KEY,
-      authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-      projectId: process.env.FIREBASE_PROJECT_ID,
-      appId: process.env.FIREBASE_APP_ID,
+      apiKey: process.env.NUXT_PUBLIC_VUEFIRE_CONFIG_API_KEY,
+      authDomain: process.env.NUXT_PUBLIC_VUEFIRE_CONFIG_AUTH_DOMAIN,
+      projectId: process.env.NUXT_PUBLIC_VUEFIRE_CONFIG_PROJECT_ID,
+      appId: process.env.NUXT_PUBLIC_VUEFIRE_CONFIG_APP_ID,
     },
   },
+  alias: {
+    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
+  }
 })
