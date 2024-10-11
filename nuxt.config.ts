@@ -23,7 +23,6 @@ export default defineNuxtConfig({
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
   },
   routeRules: {
-    // https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering
     "/": { prerender: true },
     "/login": { prerender: true },
     "/shop": { ssr: false },
