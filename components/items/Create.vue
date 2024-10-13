@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useItemStore } from '~/stores/firestore'
+  import { useItemStore } from '~/stores/itemStore'
   import type { dndItem } from '~/types/dnditem';
   const { createItem } = useItemStore()
 
