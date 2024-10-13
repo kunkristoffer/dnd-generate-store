@@ -22,7 +22,7 @@ const rarityText = computed(() => {
 
 
 <template>
-  <div class="min-w-[20svw] bg-black px-4 rounded border rarity-border">
+  <div class="min-w-[20svw] max-w-[30svw] bg-black px-4 rounded border rarity-border">
     <div class="text-slate-600 text-xl">
       <span v-if="affixType === 'prefix'" class="flex gap-2">
         <h3 class="rarity-text">{{ name }}</h3>
