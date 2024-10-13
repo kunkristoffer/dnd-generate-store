@@ -1,11 +1,14 @@
 export interface dndItem {
   name: string,
   type: string,
+  subtype?: string,
+  affixType?: 'prefix'|'suffix',
   base?: string[],
-  rarity: string,
+  rarity: 'mundane'|'common'|'uncommon'|'rare'|'very-rare'|'legendary'|'artifact',
   price: number,
+  attuned: boolean,
   desc?: string,
-  image?: string,
+  imageUrl?: string,
   src?: string,
 }
 
