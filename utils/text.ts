@@ -14,7 +14,7 @@ export function capitilize(string: string):string {
  * @returns {string} new string without any spaces
  */
 export function removeWhitespace(string: string):string {
-  return string.replace(/^\s+|\s+$/gm,'');
+  return string.replace(/\s/g, '');
 }
 
 /**
@@ -24,5 +24,5 @@ export function removeWhitespace(string: string):string {
  * @returns {string} new string with spaces replaced
  */
 export function convertWhitespace(string: string, val: string):string {
-  return string.replace(/^\s+|\s+$/gm, val);
+  return string.replace(/\s/g, val);
 }
