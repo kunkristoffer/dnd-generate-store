@@ -22,16 +22,18 @@ import type { dndItem } from '~/types/dnditem';
 
     // Validate and print error messages
     let error = false
+
     if (item.name.length < 3) itemInputError.value.name = 'Name is too short', error = true
     if (item.type === '' || item.type == undefined) itemInputError.value.type = 'You must select a type', error = true
     if (item.type.includes('Affix') && item.affixType == undefined) itemInputError.value.subtype = 'Must be either prefix or suffix', error = true
+    if (item.type.includes('Affix') && item.affixType != undefined && item.base?.length === 0) itemInputError.value.subtype = 'You must select at least one base', error = true
     if (['armor', 'weapon', 'wearables'].includes(item.type)) {
       if (item.subtype === '' || item.subtype == undefined) itemInputError.value.subtype = 'You must select an item subtype', error = true
     }
 
     // Only continue if there are no errors
-    if (!error) return
-
+    if (error) return
+    console.log(item)
   }
 
   const resetError = () => {
@@ -40,16 +42,15 @@ import type { dndItem } from '~/types/dnditem';
     }
   }
 
-  const resetItem = () => itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
-
-  watch(itemInputObj.value, update => {
+  const resetItem = () => {
     resetError()
-  })
+    itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
+  }
 </script>
 <template>
   <div class="absolute w-full h-full backdrop-blur-sm backdrop-brightness-50">
     <div class="grid place-content-center w-full h-svh">
-      <div id="create" class="flex gap-4 p-8 rounded-lg bg-slate-600 border border-slate-800">
+      <form @change="resetError" id="create" class="flex gap-4 p-8 rounded-lg bg-slate-600 border border-slate-800">
         <div class="flex flex-col flex-nowrap gap-2">
           <h1>Create your very own item!</h1>
           <span class="input-label">
@@ -222,7 +223,7 @@ import type { dndItem } from '~/types/dnditem';
           </template>
         </div>
         <ItemsPreview v-bind="itemInputObj" />
-      </div>
+      </form>
     </div>
   </div>
 </template>
