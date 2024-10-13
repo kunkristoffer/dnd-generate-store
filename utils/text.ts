@@ -10,9 +10,19 @@ export function capitilize(string: string):string {
 
 /**
  * Removes all use of space in a string and returns the result
- * @param {string} string
- * @returns {string}
+ * @param {string} string string to modify
+ * @returns {string} new string without any spaces
  */
 export function removeWhitespace(string: string):string {
   return string.replace(/^\s+|\s+$/gm,'');
+}
+
+/**
+ * Replaces all occourances of spaces with given character
+ * @param {string} string string to modify
+ * @param {string} val replaces space
+ * @returns {string} new string with spaces replaced
+ */
+export function convertWhitespace(string: string, val: string):string {
+  return string.replace(/^\s+|\s+$/gm, val);
 }
