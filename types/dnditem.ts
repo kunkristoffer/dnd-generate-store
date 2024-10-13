@@ -1,9 +1,11 @@
 export interface dndItem {
   name: string,
   type: string,
+  subtype?: string,
   base?: string[],
   rarity: string,
   price: number,
+  attuned: boolean,
   desc?: string,
   image?: string,
   src?: string,
