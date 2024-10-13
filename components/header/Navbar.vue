@@ -3,6 +3,7 @@
     <ul class="flex gap-4">
       <li><NuxtLink to="/">Home</NuxtLink></li>
       <li><NuxtLink to="/shop">Shop</NuxtLink></li>
+      <li><NuxtLink to="/edit">Edit</NuxtLink></li>
     </ul>
   </nav>
 </template>
