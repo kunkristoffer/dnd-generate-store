@@ -3,6 +3,9 @@
   import type { dndItem } from '~/types/dnditem';
   const { createItem } = useItemStore()
 
+  // Statuses
+  const toastMessage = ref<{message:string|undefined, severity: 'info'|'warning'|'error'|'success'|undefined}>({message: undefined, severity: 'info'})
+
   // form bindings
   const itemInputObj = ref<dndItem>({ name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false })
   const itemInputError = ref<{[key: string]: string|undefined}>({ name: undefined, type: undefined, subtype: undefined, base: undefined, rarity: undefined, price: undefined })
@@ -38,7 +41,18 @@
 
     // Only continue if there are no errors
     if (error) return
-    createItem(item).catch(err => console.log(err))
+    createItem(item)
+      .catch(err =>  {
+        toastMessage.value.message = `${err}`
+        toastMessage.value.severity = 'error'
+      })
+      .then(ref => {
+        if (ref.id) {
+          toastMessage.value.message = `Created: ${itemInputObj.value.name}`
+          toastMessage.value.severity = 'success'
+          itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
+        }
+      })
   }
 
   const resetError = () => {
@@ -49,6 +63,7 @@
 
   const resetItem = () => {
     resetError()
+    toastMessage.value.message = undefined
     itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
   }
 
@@ -151,7 +166,6 @@
             <select v-model="itemInputObj.rarity" class="text-black p-2" name="" id="">
               <option v-for="rarity in rarities" :style="{'color': rarity.color}" :value="convertWhitespace(rarity.label, '-')">{{ capitilize(rarity.label) }}</option>
             </select>
-            {{ itemInputObj.rarity }}
           </span>
           <span class="input-label">
             <label>Price</label>
@@ -172,6 +186,9 @@
           <span class="flex justify-between gap-1">
             <button class="flex-1 py-1 bg-red-500 hover:bg-red-400 active:scale-105 rounded-lg" @click.prevent="resetItem">reset</button>
             <button class="flex-1 py-1 bg-green-500 hover:bg-green-400 active:scale-105 rounded-lg" @click.prevent="validateItem">create</button>
+          </span>
+          <span v-if="toastMessage.message" :style="{color: (toastMessage.severity === 'success' ? 'lightgreen' : toastMessage.severity === 'error' ? 'red' : 'white')}">
+            {{ toastMessage.message }}
           </span>
         </div>
         <div v-if="itemInputObj.type == 'weaponAffix'" class="flex flex-col overflow-scroll max-h-[32rem] max-w-36">
