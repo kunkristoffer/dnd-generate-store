@@ -10,11 +10,17 @@ export const useItemStore = defineStore('itemStore', () => {
   const fetchData = async () => {
     const items = await getDocs(collection(db, "items"));
     rawData.value = items.docs.map(item => item.data())
+    data.value = items.docs.map(item => item.data())
   }
 
   // temp dataset due to mutation
   const rawData = ref()
   const data = ref()
+
+  // Update with all from raw
+  const updateDataAll = () => {
+    data.value = [...rawData.value]
+  }
 
   // Update data with user input
   const updateData = (config: dndRarity) => {
@@ -56,5 +62,5 @@ export const useItemStore = defineStore('itemStore', () => {
   // Init data
   fetchData()
 
-  return { data, updateData, pickRandom, createItem }
+  return { data, rawData, updateData, updateDataAll, pickRandom, createItem }
 })
