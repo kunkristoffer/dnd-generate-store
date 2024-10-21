@@ -44,6 +44,9 @@ const rarityText = computed(() => {
     <div class="flex flex-col pt-2">
       <p v-if="src?.includes('http')"  class="text-slate-400">Item refference: <NuxtLink class="text-blue-500" external :href="src">Link</NuxtLink></p>
       <p v-else class="text-slate-400">{{ src }}</p>
+    </div>
+    <div class="flex gap-4 justify-between pt-2 w-full">
+      <p v-if="attuned" class="text-slate-300">Requires attunement</p>
       <p class="self-end">{{ price }}🪙</p>
     </div>
   </div>
