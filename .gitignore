@@ -25,3 +25,6 @@ logs
 
 # Google api
 service-account.json
+
+# Localtest
+logo.png
