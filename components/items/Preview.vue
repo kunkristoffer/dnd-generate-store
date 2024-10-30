@@ -22,7 +22,7 @@ const rarityText = computed(() => {
 
 
 <template>
-  <div class="min-w-[20svw] max-w-[30svw] bg-black px-4 rounded border rarity-border">
+  <div class="min-w-[20svw] max-w-[30svw] bg-black p-4 rounded border rarity-border">
     <div class="text-slate-600 text-xl">
       <span v-if="affixType === 'prefix'" class="flex gap-2">
         <h3 class="rarity-text">{{ name }}</h3>
@@ -44,6 +44,9 @@ const rarityText = computed(() => {
     <div class="flex flex-col pt-2">
       <p v-if="src?.includes('http')"  class="text-slate-400">Item refference: <NuxtLink class="text-blue-500" external :href="src">Link</NuxtLink></p>
       <p v-else class="text-slate-400">{{ src }}</p>
+    </div>
+    <div class="flex gap-4 justify-between pt-2 w-full">
+      <p v-if="attuned" class="text-slate-300">Requires attunement</p>
       <p class="self-end">{{ price }}🪙</p>
     </div>
   </div>

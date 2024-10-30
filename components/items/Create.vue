@@ -1,11 +1,14 @@
 <script setup lang="ts">
-  import { useItemStore } from '~/stores/firestore'
+  import { useItemStore } from '~/stores/itemStore'
   import type { dndItem } from '~/types/dnditem';
   const { createItem } = useItemStore()
 
+  // Statuses
+  const toastMessage = ref<{message:string|undefined, severity: 'info'|'warning'|'error'|'success'|undefined}>({message: undefined, severity: 'info'})
+
   // form bindings
   const itemInputObj = ref<dndItem>({ name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false })
-  const itemInputError = ref<{[key: string]: string|undefined}>({ name: undefined, type: undefined, subtype: undefined, base: undefined, rarity: undefined, price: undefined })
+  const itemInputError = ref<{[key: string]: string|boolean|undefined}>({ name: undefined, type: undefined, subtype: undefined, base: undefined, rarity: undefined, price: undefined})
   const imageUpload = ref()
 
   // Selectable values
@@ -27,8 +30,8 @@
 
     // Validate and print error messages
     let error = false
-
     if (item.name.length < 2) itemInputError.value.name = 'Name is too short', error = true
+    if (!Number.isInteger(item.price)) itemInputError.value.price = 'Price must be a number', error = true
     if (item.type === '' || item.type == undefined) itemInputError.value.type = 'You must select a type', error = true
     if (item.type.includes('Affix') && item.affixType == undefined) itemInputError.value.subtype = 'Must be either prefix or suffix', error = true
     if (item.type.includes('Affix') && item.affixType != undefined && item.base?.length === 0) itemInputError.value.subtype = 'You must select at least one base', error = true
@@ -36,9 +39,22 @@
       if (item.subtype === '' || item.subtype == undefined) itemInputError.value.subtype = 'You must select an item subtype', error = true
     }
 
-    // Only continue if there are no errors
-    if (error) return
-    createItem(item).catch(err => console.log(err))
+    if (error) {
+      // error handling
+    } else {
+      createItem(item)
+      .catch(err =>  {
+        toastMessage.value.message = `${err}`
+        toastMessage.value.severity = 'error'
+      })
+      .then(ref => {
+        if (ref.id) {
+          toastMessage.value.message = `Created: ${itemInputObj.value.name}`
+          toastMessage.value.severity = 'success'
+          itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
+        }
+      })
+    }
   }
 
   const resetError = () => {
@@ -49,6 +65,7 @@
 
   const resetItem = () => {
     resetError()
+    toastMessage.value.message = undefined
     itemInputObj.value = { name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false }
   }
 
@@ -69,11 +86,16 @@
       }
     }
   }
+
+  const emit = defineEmits(['toggleVisibility'])
+  const toggleVisility = () => {
+    emit('toggleVisibility')
+  }
 </script>
 <template>
   <div class="absolute w-full h-full backdrop-blur-sm backdrop-brightness-50">
     <div class="grid place-content-center w-full h-svh">
-      <form @change="resetError" id="create" class="flex gap-4 p-8 rounded-lg bg-slate-600 border border-slate-800">
+      <form @change="resetError" id="create" class="relative flex gap-4 p-8 rounded-lg bg-slate-600 border border-slate-800">
         <div class="flex flex-col flex-nowrap gap-2">
           <h1>Create your very own item!</h1>
           <span class="input-label">
@@ -151,11 +173,11 @@
             <select v-model="itemInputObj.rarity" class="text-black p-2" name="" id="">
               <option v-for="rarity in rarities" :style="{'color': rarity.color}" :value="convertWhitespace(rarity.label, '-')">{{ capitilize(rarity.label) }}</option>
             </select>
-            {{ itemInputObj.rarity }}
           </span>
           <span class="input-label">
             <label>Price</label>
-            <input type="number" v-model="itemInputObj.price" placeholder="what is the price">
+            <input type="number" v-model.number="itemInputObj.price" placeholder="what is the price">
+            <p class="error">{{ itemInputError.price }}</p>
           </span>
           <span class="input-label">
             <label>Description</label>
@@ -172,6 +194,9 @@
           <span class="flex justify-between gap-1">
             <button class="flex-1 py-1 bg-red-500 hover:bg-red-400 active:scale-105 rounded-lg" @click.prevent="resetItem">reset</button>
             <button class="flex-1 py-1 bg-green-500 hover:bg-green-400 active:scale-105 rounded-lg" @click.prevent="validateItem">create</button>
+          </span>
+          <span v-if="toastMessage.message" :style="{color: (toastMessage.severity === 'success' ? 'lightgreen' : toastMessage.severity === 'error' ? 'red' : 'white')}">
+            {{ toastMessage.message }}
           </span>
         </div>
         <div v-if="itemInputObj.type == 'weaponAffix'" class="flex flex-col overflow-scroll max-h-[32rem] max-w-36">
@@ -250,6 +275,9 @@
           </template>
         </div>
         <ItemsPreview v-bind="itemInputObj" />
+        <button class="absolute right-1 top-1" @click.prevent="toggleVisility">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 30 30"><path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path></svg>
+        </button>
       </form>
     </div>
   </div>
