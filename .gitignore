@@ -25,6 +25,9 @@ logs
 
 # Google api
 service-account.json
+firebase.json
+.firebaserc
+.firebase
 
 # Localtest
 logo.png
