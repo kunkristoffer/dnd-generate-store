@@ -30,4 +30,9 @@ export default defineNuxtConfig({
     "/login": { prerender: true },
     "/shop": { ssr: false },
   },
+  nitro: {
+    firebase: {
+      gen: 2
+    }
+  },
 })
