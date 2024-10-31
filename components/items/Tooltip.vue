@@ -11,20 +11,15 @@
   }
 
   const handleClick = (event: MouseEvent) => {
+    if (!container.value) return
     const target = event.target as HTMLElement
     const containsTooltip = target.parentElement?.getAttribute('data-tooltip')
     const containsChild = container.value?.contains(target)
 
-    if (target !== container.value && !containsTooltip && !containsChild) visible.value = false
-    if (!container.value) return
+    if (target !== container.value && !containsTooltip && !containsChild)  visible.value = false
     if (!containsChild) {
       // move tooltip
-      const windowHeight = window.innerHeight
-      const cursor = event.clientY
-      const elementHeight = container.value?.offsetHeight
-      const outside = cursor + elementHeight > windowHeight
-
-      position.value = {top: (outside ? windowHeight - elementHeight - 10 : event.clientY) + "px", left: (event.clientX + 10) + "px"}
+      position.value = {top: ((event.clientY + container.value?.offsetHeight > window.innerHeight) ? window.innerHeight - container.value?.offsetHeight - 10 : event.clientY) + "px", left: (event.clientX + 20) + "px"}
     }
   }
 
@@ -35,7 +30,7 @@
   defineExpose({ updateItem })
 </script>
 <template>
-  <div v-if="visible" ref="container" class="fixed z-50 bg-red-500" :style="position">
+  <div v-show="visible" ref="container" class="fixed z-50 bg-red-500" :style="position">
     <ItemsPreview v-bind="item" />
   </div>
 </template>
