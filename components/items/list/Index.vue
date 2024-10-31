@@ -2,30 +2,29 @@
   import { useItemStore } from '~/stores/itemStore'
   import type { dndItem } from '~/types/dnditem';
   const store = useItemStore()
-  const { data } = storeToRefs(store);
-  const testData = ref<dndItem>({ name: '', type: '', subtype: '', base: [], rarity: 'common', price: 0, desc: '', imageUrl: '', src: '', attuned: false })
-  const showPreview = ref(false)
+  const { data } = storeToRefs(store)
+
+  const tooltipRef = ref()
+  const handleSelect = (item: dndItem) => tooltipRef.value?.updateItem(item)
 </script>
 
 <template>
   <section class="table w-full border border-slate-500 [&>*:nth-child(even)]:bg-slate-600 rounded-lg">
-    <header class="table-row bg-slate-700 font-bold uppercase">
+    <header class="table-row bg-slate-700 font-bold uppercase w-full">
       <div class="table-cell px-4 py-1">name</div>
       <div class="table-cell px-4 py-1">rarity</div>
       <div class="table-cell px-4 py-1">type</div>
       <div class="table-cell px-4 py-1">sub-type</div>
       <div class="table-cell px-4 py-1">price</div>
     </header>
-    <div v-for="(item, index) in data" :key="item.name+index" @click="testData = item, showPreview = true" class="table-row test mt-2 text-slate-300 hover:text-white hover:!bg-slate-800">
-      <div class="table-cell px-4 py-1" :class="item.rarity">{{ item.name }}{{ item.attuned ? ' ✅' : '' }}</div>
+    <div v-for="(item, index) in data" :key="item.name+index" class="table-row test mt-2 text-slate-300 hover:text-white hover:!bg-slate-800">
+      <div @click="handleSelect(item)" :data-tooltip="item" class="table-cell px-4 py-1 cursor-pointer hover:underline" :class="item.rarity">{{ item.name }}{{ item.attuned ? ' 🏷️' : '' }}</div>
       <div class="table-cell px-4 py-1" :class="item.rarity">{{ item.rarity }}</div>
       <div class="table-cell px-4 py-1" :class="item.rarity">{{ item.type }}</div>
       <div class="table-cell px-4 py-1" :class="item.rarity">{{ item.subtype || item.affixType }}</div>
-      <div class="table-cell px-4 py-1 text-right">{{ item.price }}🪙</div>
+      <div class="table-cell px-4 py-1 text-right">{{ item.price.toLocaleString() }}🪙</div>
     </div>
-    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" v-if="showPreview" @click="showPreview = false">
-      <ItemsPreview v-bind="testData" />
-    </div>
+    <ItemsTooltip ref="tooltipRef"/>
   </section>
 </template>
 
