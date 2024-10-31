@@ -26,9 +26,8 @@ export default defineNuxtConfig({
     pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs"
   },
   routeRules: {
-    "/": { prerender: true },
-    "/login": { prerender: true },
     "/shop": { ssr: false },
+    "/edit": { ssr: false },
   },
   nitro: {
     firebase: {
