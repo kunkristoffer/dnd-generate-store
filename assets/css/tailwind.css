@@ -10,5 +10,6 @@ body {
 #__nuxt {
   display: flex;
   flex-flow: column nowrap;
+  min-width: 375px;
   min-height: 100svh;
 }
