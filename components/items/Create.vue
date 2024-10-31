@@ -87,6 +87,16 @@
     }
   }
 
+  const handlePaste = (event: ClipboardEvent) => {
+    event.preventDefault()
+    const { clipboardData } = event
+    const data = clipboardData?.getData('text/html')
+    itemInputObj.value.desc = data && stripFormatting(data)
+  }
+  const stripFormatting = (str:string):string => {
+    return str.substring(33, str.length - 34).replace(/\s\s+/g, ' ');
+  }
+
   const emit = defineEmits(['toggleVisibility'])
   const toggleVisility = () => {
     emit('toggleVisibility')
@@ -181,7 +191,7 @@
           </span>
           <span class="input-label">
             <label>Description</label>
-            <input type="text" v-model="itemInputObj.desc" placeholder="describe the item">
+            <input type="text" v-model="itemInputObj.desc" v-on:paste="handlePaste" placeholder="describe the item">
           </span>
           <span class="input-label">
             <label>Source</label>
