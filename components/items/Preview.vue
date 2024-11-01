@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col gap-1 min-w-[20svw] max-w-[35svw] max-h-[50svh] overflow-scroll bg-black p-4 rounded border rarity-border overscroll-contain">
+  <div class="flex flex-col gap-1 min-w-[20svw] w-[640px] max-w-[60svw] max-h-[75svh] overflow-scroll bg-black p-4 rounded border rarity-border overscroll-contain">
     <div class="flex text-slate-600 text-xl">
       <span v-if="affixType === 'prefix'" class="flex gap-2">
         <h3 class="rarity-text">{{ name }}</h3>
@@ -34,7 +34,7 @@
         <h3 class="rarity-text">{{ name }}</h3>
       </span>
       <h3 v-if="affixType === undefined" class="rarity-text">{{ name ? name : '"Super awesome item"' }}</h3>
-      <span v-if="attuned" class="ml-auto">🏷️</span>
+      <span v-if="attuned" class="ml-auto" title="This item requires attunement">🏷️</span>
     </div>
     <div v-if="base && base?.length > 0">
       <p class="italic capitalize text-slate-400">[ {{ base?.join(', ') }} ]</p>
