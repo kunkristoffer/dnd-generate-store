@@ -6,7 +6,7 @@
   }]
 </script>
 <template>
-  <div class="flex flex-1 flex-nowrap gap-4">
+  <div class="flex flex-wrap flex-1 gap-4">
     <input class="p-1 text-black" type="text" name="" id="" placeholder="Search for item name">
     <select class="text-black px-2" name="" id="">
       <option value="*" disabled selected>type</option>
