@@ -19,7 +19,10 @@
     if (target !== container.value && !containsTooltip && !containsChild)  visible.value = false
     if (!containsChild) {
       // move tooltip
-      position.value = {top: ((event.clientY + container.value?.offsetHeight > window.innerHeight) ? window.innerHeight - container.value?.offsetHeight - 10 : event.clientY) + "px", left: (event.clientX + 20) + "px"}
+      position.value = {
+        top: ((event.clientY + container.value?.offsetHeight > window.innerHeight) ? window.innerHeight - container.value?.offsetHeight - 10 : event.clientY) + "px",
+        left: ((event.clientX + container.value?.offsetWidth > window.innerWidth) ? window.innerWidth - container.value?.offsetWidth - 10 : event.clientX + 10) + "px"
+      }
     }
   }
 
